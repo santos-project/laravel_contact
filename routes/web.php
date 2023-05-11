@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactFormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +20,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('about', [AboutController::class, 'index'])->name('about.index');
+
+// Route::resource('contacts', ContactFormController::class);
+Route::prefix('contacts')
+    ->controller(ContactFormController::class)
+    ->name('contacts.')
+    ->group(function () {
+        Route::get('/', 'index')->name('index');
+    });
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -28,4 +40,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
