@@ -17,7 +17,7 @@ use App\Http\Controllers\ContactFormController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('about', [AboutController::class, 'index'])->name('about.index');
