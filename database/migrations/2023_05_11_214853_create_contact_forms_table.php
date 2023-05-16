@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('contact_forms', function (Blueprint $table) {
             $table->id();
             $table->string('name', 20); //氏名
+            $table->string('title', 50); //タイトル
             $table->string('email', 255); //メールアドレス
             $table->longText('url')->nullable(); //URL null可
             $table->boolean('gender'); //性別
