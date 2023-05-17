@@ -28,7 +28,8 @@ Route::prefix('contacts')
     ->name('contacts.')
     ->group(function () {
         Route::get('/', 'index')->name('index');
-        Route::post('/', 'store')->name('store');
+        Route::post('/confirm', 'confirm')->name('confirm');
+        Route::post('/thanks', 'send')->name('send');
     });
 
 Route::get('/dashboard', function () {
