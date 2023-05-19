@@ -17,75 +17,69 @@
               <div class="relative">
                 <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
                 <p class="bg-gray-100 p-4 rounded font-semibold">{{ $inputs['name']}}</p>
-                <input type="hidden" id="name" name="name" value="{{ $inputs['name']}}"
-                  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                <input type="hidden" id="name" name="name" value="{{ $inputs['name']}}">
               </div>
             </div>
 
             <div class="p-2 w-full">
               <div class="relative">
                 <label for="title" class="leading-7 text-sm text-gray-600">Title</label>
-                <input type="text" id="title" name="title"
-                  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                <p class="bg-gray-100 p-4 rounded font-semibold">{{ $inputs['title']}}</p>
+                <input type="hidden" id="title" name="title" value="{{ $inputs['title'] }}">
               </div>
             </div>
 
             <div class="p-2 w-full">
               <div class="relative">
                 <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
-                <input type="email" id="email" name="email"
-                  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                <p class="bg-gray-100 p-4 rounded font-semibold">{{ $inputs['email']}}</p>
+                <input type="hidden" id="email" name="email" value="{{ $inputs['email']}}">
               </div>
             </div>
 
             <div class="p-2 w-full">
               <div class="relative">
                 <label for="url" class="leading-7 text-sm text-gray-600">Web Site</label>
-                <input type="url" id="url" name="url"
-                  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                <p class="bg-gray-100 p-4 rounded font-semibold">{{ $inputs['url']}}</p>
+                <input type="hidden" id="url" name="url" value="{{ $inputs['url'] }}">
               </div>
             </div>
 
             <div class="p-2 w-full">
               <div class="relative">
-                <label class="leading-7 text-sm text-gray-600">Gender</label><br />
-                <input type="radio" name="gender" value="0">Male
-                <input type="radio" name="gender" value="1">Female
+                <label class="leading-7 text-sm text-gray-600">Gender</label>
+                <p class="bg-gray-100 p-4 rounded font-semibold">{{ $inputs['gender']}}</p>
+                <input type="hidden" name="gender" value="{{ $inputs['gender'] }}">
               </div>
             </div>
 
             <div class="p-2 w-full">
               <div class="relative">
-                <label for="age" class="leading-7 text-sm text-gray-600">Age</label><br />
-                <select name="age" id="">
-                  <option value="">Select</option>
-                  <option value="1">-19</option>
-                  <option value="2">20-29</option>
-                  <option value="3">30-39</option>
-                  <option value="4">40-49</option>
-                  <option value="5">50-59</option>
-                  <option value="6">60-</option>
-                </select>
+                <label for="age" class="leading-7 text-sm text-gray-600">Age</label>
+                <p class="bg-gray-100 p-4 rounded font-semibold">{{ $inputs['age']}}</p>
+                <input type="hidden" name="age" value="{{ $inputs['age'] }}">
               </div>
             </div>
 
             <div class="p-2 w-full">
               <div class="relative">
-                <label for="contact" class="leading-7 text-sm text-gray-600">Message</label>
-                <textarea id="contact" name="contact"
-                  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                <label for="contact" class="leading-7 text-sm text-gray-600">Message</label><br />
+                <textarea id="contact" name="contact" class="w-full border-none bg-gray-100 p-4 rounded font-semibold" readonly>{{ $inputs['contact']}}</textarea>
+                <input type="hidden" name="contact" value="{{ $inputs['contact'] }}">
               </div>
             </div>
 
-            <div class="p-2 w-full">
+            {{-- <div class="p-2 w-full">
               <div class="relative">
                 <input type="checkbox" id="caution" name="caution"> I agree
               </div>
-            </div>
+            </div> --}}
 
-            <div class="p-2 w-full">
+            <div class="p-2 w-full flex justify-center gap-8">
               <button
-                class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Next</button>
+                class="flex text-white bg-gray-500 border-0 py-2 px-8 focus:outline-none hover:bg-gray-600 rounded text-lg" type="submit" name="back" value="back">Back</button>
+              <button
+                class="flex text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Send</button>
             </div>
 
           </div>
